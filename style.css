@@ -81,3 +81,16 @@ header {
 .rating {
     color: rgb(225, 163, 8);
 }
+
+.upload-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+
+button {
+    background-color: orange;
+    
+}
