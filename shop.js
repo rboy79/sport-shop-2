@@ -15,10 +15,10 @@ let itemList = [
   makeItem("Nike shoes 6", "$350", "./img/item3.png"),
 ];
 
-const display1 = document.querySelector(".case1");
+const display = document.querySelector(".item-container");
 
 for (let i = 0; i < itemList.length; i++) {
-  display1.innerHTML += `
+  display.innerHTML += `
         <div class="item">
                 <div class="item-img">
                     <img src="${itemList[i].imgUrl}" alt="item picture">
@@ -40,14 +40,16 @@ const inputImage = document.querySelector(".input-image");
 const addItem = document.querySelector(".add-btn");
 
 addItem.addEventListener("click", () => {
-  if (input) {
-    return (itemList.push = makeItem(inputName, inputPrice, inputImage));
+  if (!inputName.value || !inputPrice.value || !inputImage.value) {
+    return;
   }
 
-  const display2 = document.querySelector(".case2");
+  const newItem = makeItem(inputName.value, inputPrice.value, inputImage.value);
 
-  for (let j = 6; j < itemList.length; j++) {
-    display2.innerHTML += `
+  itemList.push(newItem);
+
+  for (let j = itemList.length - 1; j < itemList.length; j++) {
+    display.innerHTML += `
               <div class="item">
                       <div class="item-img">
                           <img src="${itemList[j].imgUrl}" alt="item picture">

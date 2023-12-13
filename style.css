@@ -54,7 +54,8 @@ header {
     
 }
 
-.item_container {
+.item-container {
+    background-color: #850910;
     padding: 50px 0 50px 0;
     display: flex;
     justify-content: center;
