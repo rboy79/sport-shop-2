@@ -40,7 +40,7 @@ const inputImage = document.querySelector(".input-image");
 const addItem = document.querySelector(".add-btn");
 
 addItem.addEventListener("click", () => {
-  if (!inputName.value || !inputPrice.value || !inputImage.value) {
+  if (!inputName.value && !inputPrice.value && !inputImage.value) {
     return;
   }
 
