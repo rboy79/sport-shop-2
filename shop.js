@@ -48,7 +48,8 @@ addItem.addEventListener("click", () => {
 
   itemList.push(newItem);
 
-  display.innerHTML += `
+  for (let j = itemList.length - 1; j < itemList.length; j++) {
+    display.innerHTML += `
               <div class="item">
                       <div class="item-img">
                           <img src="${itemList[j].imgUrl}" alt="item picture">
@@ -59,4 +60,6 @@ addItem.addEventListener("click", () => {
       
               </div>
           `;
+    input.value = "";
+  }
 });
